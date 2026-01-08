@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="light" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>แผนมื้ออาหารรายสัปดาห์</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1E3A8A","primary-light": "#3B82F6","primary-content": "#ffffff",
+                        "accent": "#60A5FA","background-light": "#F0F4F8","background-dark": "#0B1120","surface-light": "#ffffff",
+                        "surface-dark": "#172554","text-main": "#0F172A","text-muted": "#64748B","secondary-bg": "#DBEAFE",},
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans Thai", "sans-serif"],
+                        "body": ["Manrope", "Noto Sans Thai", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<header class="sticky top-0 z-20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-4 py-3 flex items-center justify-between border-b border-blue-100 dark:border-blue-900">
+<div class="flex items-center gap-3">
+<div class="bg-blue-100 dark:bg-blue-900/50 p-2 rounded-full">
+<span class="material-symbols-outlined text-primary dark:text-blue-300">calendar_month</span>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight text-slate-900 dark:text-white">แผนของฉัน</h2>
+<p class="text-xs text-slate-500 dark:text-slate-400">23 - 29 ตุลาคม 2023</p>
+</div>
+</div>
+<button class="flex size-10 items-center justify-center rounded-full bg-white dark:bg-surface-dark shadow-sm border border-blue-100 dark:border-blue-800 text-primary dark:text-blue-300 relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">3</span>
+</button>
+</header>
+<div class="w-full bg-surface-light dark:bg-surface-dark shadow-sm pt-4 pb-2 mb-4 border-b border-blue-50 dark:border-blue-900/30">
+<div class="flex items-center justify-between px-4 mb-3">
+<button class="p-1 hover:bg-blue-50 dark:hover:bg-blue-900/50 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">chevron_left</span>
+</button>
+<p class="text-base font-bold text-center text-slate-800 dark:text-white">ตุลาคม 2023</p>
+<button class="p-1 hover:bg-blue-50 dark:hover:bg-blue-900/50 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">chevron_right</span>
+</button>
+</div>
+<div class="flex justify-between px-2 gap-1 overflow-x-auto no-scrollbar">
+<div class="flex flex-col items-center gap-1 min-w-[13%]">
+<span class="text-xs font-semibold text-slate-400">จ.</span>
+<button class="flex size-10 items-center justify-center rounded-full bg-primary text-white shadow-md shadow-blue-200 dark:shadow-none font-bold text-sm">23</button>
+</div>
+<div class="flex flex-col items-center gap-1 min-w-[13%]">
+<span class="text-xs font-semibold text-slate-400">อ.</span>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/50 text-slate-700 dark:text-slate-300 font-medium text-sm">24</button>
+</div>
+<div class="flex flex-col items-center gap-1 min-w-[13%]">
+<span class="text-xs font-semibold text-slate-400">พ.</span>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/50 text-slate-700 dark:text-slate-300 font-medium text-sm">25</button>
+</div>
+<div class="flex flex-col items-center gap-1 min-w-[13%]">
+<span class="text-xs font-semibold text-slate-400">พฤ.</span>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/50 text-slate-700 dark:text-slate-300 font-medium text-sm">26</button>
+</div>
+<div class="flex flex-col items-center gap-1 min-w-[13%]">
+<span class="text-xs font-semibold text-slate-400">ศ.</span>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/50 text-slate-700 dark:text-slate-300 font-medium text-sm">27</button>
+</div>
+<div class="flex flex-col items-center gap-1 min-w-[13%]">
+<span class="text-xs font-semibold text-slate-400">ส.</span>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/50 text-slate-700 dark:text-slate-300 font-medium text-sm">28</button>
+</div>
+<div class="flex flex-col items-center gap-1 min-w-[13%]">
+<span class="text-xs font-semibold text-slate-400">อา.</span>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/50 text-slate-700 dark:text-slate-300 font-medium text-sm">29</button>
+</div>
+</div>
+<div class="flex justify-center mt-1">
+<div class="h-1 w-12 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+</div>
+</div>
+<div class="flex flex-col gap-6 px-4">
+<section>
+<div class="flex items-center justify-between py-2 mb-2">
+<h3 class="text-xl font-bold tracking-tight text-primary dark:text-white">วันนี้, 23 ต.ค.</h3>
+<div class="flex items-center gap-1 text-sm font-medium text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-900/40 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+<span>1,250 / 2,000 kcal</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="group relative overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-blue-100 dark:border-blue-900 transition-all hover:shadow-md hover:shadow-blue-100 dark:hover:shadow-none">
+<div class="flex p-3 gap-4">
+<div class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-gray-100">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Close up of a bowl of warm rice porridge with pork and ginger" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbF1voK0xI0V6GsOy3HsD_gk1ijlrp8crV5QKIVfhumzBPfJUeI8rZ5GffBX3PWQ8sfyZ58tfF2Zny6iWefFNWoZCcAQQ3wSxrKmzDknlLjJhXLM8ECceY-RVB96lLMENJPIlF6Lijw9NZQ9qmG-oZK6EP8n_0ASxPm30DqKo9_RYYFJbkoZnauLDbq9NntVvcyDOYir48rrTgJ_QB40kcuMln6we0OijLNSEDWrwfJKk1C-e974mdvqAiMfTSzeauFuT59_nEl0dh');">
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between py-1">
+<div>
+<div class="mb-1 flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-400">มื้อเช้า</span>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+<h4 class="font-bold text-lg leading-snug text-slate-800 dark:text-white">โจ๊กหมูใส่ไข่</h4>
+</div>
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1 text-xs font-medium text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                                        350 kcal
+                                    </span>
+<span class="h-1 w-1 rounded-full bg-slate-300"></span>
+<span class="text-xs text-slate-500 dark:text-slate-400">15 นาที</span>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-blue-100 dark:border-blue-900 transition-all hover:shadow-md hover:shadow-blue-100 dark:hover:shadow-none">
+<div class="flex p-3 gap-4">
+<div class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-gray-100">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Plate of chicken breast salad with fresh vegetables" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_CSg3Qga9eeMAvxg1i1szt9J7kZJJRrnaV15QskhDE-jzJ5D5E9Na5zC5mzl7acIly5t9Yc4o-sq6xeCLx4MXo0z7JW-hywkrrBmVIQ4k6BXIpo-G56A3-VGF0ya8cSHTTi_MLygYFJiViVxcJFrrOL_r0BQaU6AMCx346zpN8Rsh6lQ_u2MxcsmLtQQFymaX4pDNo9D_SHiMclK2kLKMt2BXSOESyR7dFWWNFeV16i4erEltdJh15AUWCfzjJbEv4g4xPPW1Ej3j');">
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between py-1">
+<div>
+<div class="mb-1 flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-400">มื้อเที่ยง</span>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+<h4 class="font-bold text-lg leading-snug text-slate-800 dark:text-white">สลัดอกไก่</h4>
+</div>
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1 text-xs font-medium text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                                        420 kcal
+                                    </span>
+<span class="h-1 w-1 rounded-full bg-slate-300"></span>
+<span class="text-xs text-slate-500 dark:text-slate-400">20 นาที</span>
+</div>
+</div>
+</div>
+</div>
+<button class="group flex w-full items-center justify-center gap-2 rounded-xl border-2 border-dashed border-blue-200 dark:border-blue-800/50 bg-blue-50/50 dark:bg-blue-900/10 py-4 transition-colors hover:bg-blue-50 dark:hover:bg-blue-900/20 active:scale-[0.99]">
+<div class="flex size-8 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</div>
+<span class="font-bold text-slate-700 dark:text-slate-300">เพิ่มมื้อเย็น</span>
+</button>
+<button class="group flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-gray-300 dark:border-gray-700 bg-transparent py-3 transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 active:scale-[0.99]">
+<span class="material-symbols-outlined text-gray-400">add</span>
+<span class="font-medium text-gray-500 dark:text-gray-400">เพิ่มของว่าง</span>
+</button>
+</div>
+</section>
+<div class="h-px w-full bg-gray-200 dark:bg-gray-800"></div>
+<section class="opacity-60 hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between py-2 mb-2">
+<h3 class="text-lg font-bold tracking-tight text-slate-500 dark:text-slate-400">พรุ่งนี้, 24 ต.ค.</h3>
+</div>
+<div class="flex flex-col gap-4">
+<div class="group relative overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-blue-100 dark:border-blue-900">
+<div class="flex p-3 gap-4">
+<div class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-gray-100">
+<div class="h-full w-full bg-cover bg-center" data-alt="Healthy yogurt bowl with granola and fruits" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsd_dbN1HtcGy_l5abWo1zBK_bzH-Cv0Munta-i6AVPVe4jAHmO1PTGKAHz-Ys84ZdkhOsZfcdtZTzBpT7C4ZFHj85PTEWhBqvj70kuBvvHTocIXa3ANXbUFp0a0dg-bx8tKVePi7MmpHpJPgCI-jezz_lujINVeNt6TtwkJSyctGSjjZABB-zm9QvvGNLdt1ppYXwOn4Q5jUJHyRXv_-CeMTtVb1JOmmPa9ZtX5ttByMYIdSahjAIvQJfnjYVPT39GbPukqo7BNNu');">
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between py-1">
+<div>
+<div class="mb-1 flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-400">มื้อเช้า</span>
+</div>
+<h4 class="font-bold text-lg leading-snug text-slate-800 dark:text-white">โยเกิร์ตผลไม้รวม</h4>
+</div>
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1 text-xs font-medium text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                                        280 kcal
+                                    </span>
+</div>
+</div>
+</div>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-gray-300 dark:border-gray-700 bg-transparent py-3 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800/50">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="font-medium">เพิ่มมื้อเที่ยง</span>
+</button>
+</div>
+</section>
+<div class="h-10"></div>
+</div>
+<button class="fixed bottom-24 right-4 z-30 flex size-14 items-center justify-center rounded-full bg-primary text-white shadow-[0_4px_12px_rgba(30,58,138,0.4)] transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[28px]">edit_calendar</span>
+</button>
+<nav class="fixed bottom-0 z-40 w-full border-t border-gray-200 dark:border-gray-800 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md pb-safe">
+<div class="flex h-16 items-center justify-around px-2">
+<a class="flex flex-col items-center gap-1 p-2 text-primary dark:text-blue-300" href="#">
+<span class="material-symbols-outlined filled">calendar_today</span>
+<span class="text-[10px] font-bold">แผนงาน</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-medium">สูตรอาหาร</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200" href="#">
+<span class="material-symbols-outlined">shopping_basket</span>
+<span class="text-[10px] font-medium">ช้อปปิ้ง</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">โปรไฟล์</span>
+</a>
+</div>
+<div class="h-5 w-full"></div>
+</nav>
+</div>
+
+</body></html>

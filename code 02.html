@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recipe Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1e3a8a", // Navy Blue
+                        "background-light": "#f8fafc", // Slate 50
+                        "background-dark": "#0f172a", // Slate 900
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-100">
+<div class="relative flex h-full min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<div class="fixed top-0 left-0 z-50 w-full max-w-md mx-auto p-4 flex items-center justify-between">
+<button class="flex items-center justify-center size-10 rounded-full bg-white/80 dark:bg-black/50 backdrop-blur-md shadow-sm transition hover:scale-105">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">arrow_back</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-white/80 dark:bg-black/50 backdrop-blur-md shadow-sm transition hover:scale-105 text-red-500">
+<span class="material-symbols-outlined fill-1">favorite</span>
+</button>
+</div>
+<div class="relative w-full h-[360px] shrink-0">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Hainanese chicken rice dish with sauce" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDh6YdLkDe2GpaJhfYFkRU-VTdU0zhwYi9w_1G6txHs2MfRRIEqe5fPXF-7LXREMbTvXuLB1bHn85czsdDlm9L3ffB9vcoaKUerHTYV5enFxR34aZw6A5oPm9DnokNwkK0fIabCOA70C2EjFG8D2jkrb7V4_aM3MeqkPg14jUXtkp2kpV7-okw0LIRD9fItghMjTut1z3SJQtdgvcZxVh5E4yjpjNZk9F9EoeFAvaxrTvj7KNDn3R54TF6SP_dQnGbWsqiez0ThOUxC');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-transparent"></div>
+</div>
+<div class="relative -mt-10 flex flex-col px-5 pb-24 z-10">
+<div class="mb-4">
+<h1 class="text-3xl font-bold leading-tight mb-2 text-slate-900 dark:text-white">ข้าวมันไก่ต้มสูตรพิเศษ</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm">สูตรเด็ดจากภัตตาคารจีนโบราณ ทำทานเองได้ง่ายๆ ที่บ้าน</p>
+</div>
+<div class="flex gap-3 flex-wrap mb-6">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-primary/10 dark:bg-primary/20 pl-3 pr-4 border border-primary/20">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400 text-[18px]">bolt</span>
+<p class="text-blue-800 dark:text-blue-300 text-xs font-bold uppercase tracking-wide">ทำง่าย</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-orange-100 dark:bg-orange-900/30 pl-3 pr-4 border border-orange-200 dark:border-orange-800">
+<span class="material-symbols-outlined text-orange-700 dark:text-orange-400 text-[18px]">schedule</span>
+<p class="text-orange-800 dark:text-orange-300 text-xs font-bold uppercase tracking-wide">30 นาที</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 pl-3 pr-4 border border-blue-200 dark:border-blue-800">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400 text-[18px]">fitness_center</span>
+<p class="text-blue-800 dark:text-blue-300 text-xs font-bold uppercase tracking-wide">โปรตีนสูง</p>
+</div>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm mb-6 border border-slate-100 dark:border-slate-700">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">สำหรับทาน</span>
+<span class="text-lg font-bold text-slate-900 dark:text-white">จำนวนคน (ที่)</span>
+</div>
+<div class="flex items-center bg-slate-100 dark:bg-slate-700 rounded-lg p-1">
+<button class="size-8 flex items-center justify-center rounded-md bg-white dark:bg-slate-600 shadow-sm text-slate-600 dark:text-slate-200 active:scale-95 transition">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="w-10 text-center font-bold text-lg text-slate-900 dark:text-white">2</span>
+<button class="size-8 flex items-center justify-center rounded-md bg-primary shadow-sm text-white font-bold active:scale-95 transition">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<div class="sticky top-20 z-40 bg-background-light dark:bg-background-dark pt-2 pb-4">
+<div class="flex p-1 bg-slate-200 dark:bg-slate-800/80 rounded-lg">
+<button class="flex-1 py-2 text-sm font-bold rounded-md bg-white dark:bg-slate-700 shadow-sm text-slate-900 dark:text-white transition-all">
+                        ส่วนผสม
+                    </button>
+<button class="flex-1 py-2 text-sm font-medium rounded-md text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
+                        วิธีทำ
+                    </button>
+<button class="flex-1 py-2 text-sm font-medium rounded-md text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
+                        โภชนาการ
+                    </button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white">วัตถุดิบหลัก</h3>
+<button class="text-xs font-bold text-primary dark:text-blue-400 hover:text-blue-600 uppercase tracking-wide">เลือกทั้งหมด</button>
+</div>
+<div class="group flex items-center gap-3 p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm transition hover:border-primary/50">
+<div class="shrink-0 size-12 bg-slate-100 dark:bg-slate-700 rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Raw chicken breast" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZ_5LOr8RhUc2-n7gi8eBVMRtnNLuViiXLJ5PxWIZFUwJjWlH9JbHVWWJet0j3YQIK-A71-Ud2YEPZqiWxiTbk15kECcVugt1jZaSBDdIsOhPYHvIj78Enahc5ISzD6_eO3d6rymRELMwdQl3-JIhy6l4VQ6_djOHOCctgJD270i_ghZ_R0arNXL1s2gmPFJ99ezqHuDUpVZ7c_W5EIRV6g9eyDdqge5bFXIz7jchqJ39t5yWXZcu5VfQ17EgJ6wf4Wrw9ILen4vGS');"></div>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-base font-semibold text-slate-900 dark:text-white truncate">อกไก่</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">200 กรัม</p>
+</div>
+<label class="relative flex cursor-pointer items-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700">
+<input class="peer h-6 w-6 cursor-pointer appearance-none rounded-full border-2 border-slate-300 dark:border-slate-500 bg-transparent transition-all checked:border-primary checked:bg-primary hover:scale-105" type="checkbox"/>
+<span class="material-symbols-outlined absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 transition-opacity peer-checked:opacity-100 text-[18px]">check</span>
+</label>
+</div>
+<div class="group flex items-center gap-3 p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm transition hover:border-primary/50">
+<div class="shrink-0 size-12 bg-slate-100 dark:bg-slate-700 rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Jasmine rice grains" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnr4S6t3Z0uKBH9A-00Hdy-8wmDha-aZa3-ydzeOtsS2sPU89hXshHp5pp_a2EAXKbhbOzliauFUwWQ3MztIcIjX9K1AEhFV89Il0rNpazVsm4ZHYBIs3z0RN0lnkUhKdKFZ00_DPG_KjnKqNpq7Jd1VYi2SxhGHDDRqFgC7MfUExAqySCI2iSWBtsNAkMRrYApFmEkJkBvlFGKljb7RtV6G2R1q3SqtaqCOSkMRwL72fVrkQJd7gAymIoRJhuXk8C0FcfuJQ4pZkz');"></div>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-base font-semibold text-slate-900 dark:text-white truncate">ข้าวหอมมะลิ</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">2 ถ้วยตวง</p>
+</div>
+<label class="relative flex cursor-pointer items-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700">
+<input checked="" class="peer h-6 w-6 cursor-pointer appearance-none rounded-full border-2 border-slate-300 dark:border-slate-500 bg-transparent transition-all checked:border-primary checked:bg-primary hover:scale-105" type="checkbox"/>
+<span class="material-symbols-outlined absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 transition-opacity peer-checked:opacity-100 text-[18px]">check</span>
+</label>
+</div>
+<div class="group flex items-center gap-3 p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm transition hover:border-primary/50">
+<div class="shrink-0 size-12 bg-slate-100 dark:bg-slate-700 rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Fresh ginger root" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIl-spDCx3TJDCDa9aKbBhVnK8j--1zbmGuwg10rOqJbCi2JZJgfkAsC6VIXo-Km4zC_fjAubhBwRqqeLGapdCSwu3d3bsb8-BckaN1hcIGg1LMGsMlxmmpcHdFSmvCgHXpof0c3UjJZCL4BEErn_4G71kMkwBZ-T-3YzMcmysSpITuV6uT-t2RvHtwq6vmlbmBj9RoQ5LkhedUPkUPgSOr2y1xUIfL_8-nA0z7UrQlkPOJsb7fKE-xpi9d8q1xAtI0JoeaFBrFMP2');"></div>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-base font-semibold text-slate-900 dark:text-white truncate">ขิงแก่</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">3-4 แว่น</p>
+</div>
+<label class="relative flex cursor-pointer items-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700">
+<input class="peer h-6 w-6 cursor-pointer appearance-none rounded-full border-2 border-slate-300 dark:border-slate-500 bg-transparent transition-all checked:border-primary checked:bg-primary hover:scale-105" type="checkbox"/>
+<span class="material-symbols-outlined absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 transition-opacity peer-checked:opacity-100 text-[18px]">check</span>
+</label>
+</div>
+<div class="group flex items-center gap-3 p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm transition hover:border-primary/50">
+<div class="shrink-0 size-12 bg-slate-100 dark:bg-slate-700 rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Garlic cloves" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtwyqjSXn5WugW3bnSCdKlrzALsEJlIlrOvcikX85EfPKQf-rO-rr9K3X05pmW3FIPyp1R205sCbyZO66JgpfGFirpi-40-DxRW7_zb4aJQDbYbGIwW-UzUulHZ77VhqPpl3y3YINTz75SWYOWKe6zPhUYIYFIQFliwaxeBBhluKD7ftoU7J9ZWMHUp2zf76reGm8SEXhQLi-JtnF3w2abDtPFsKw2zBbWodCUplDrz1_kf_uml00qG_U0l5TUMVHGkjU-_yxJzQvp');"></div>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-base font-semibold text-slate-900 dark:text-white truncate">กระเทียม</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">5 กลีบ</p>
+</div>
+<label class="relative flex cursor-pointer items-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700">
+<input class="peer h-6 w-6 cursor-pointer appearance-none rounded-full border-2 border-slate-300 dark:border-slate-500 bg-transparent transition-all checked:border-primary checked:bg-primary hover:scale-105" type="checkbox"/>
+<span class="material-symbols-outlined absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 transition-opacity peer-checked:opacity-100 text-[18px]">check</span>
+</label>
+</div>
+<div class="h-4"></div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white">เครื่องปรุง</h3>
+</div>
+<div class="group flex items-center gap-3 p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm transition hover:border-primary/50">
+<div class="shrink-0 size-12 bg-slate-100 dark:bg-slate-700 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400">liquor</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-base font-semibold text-slate-900 dark:text-white truncate">ซีอิ๊วขาว</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">1 ช้อนโต๊ะ</p>
+</div>
+<label class="relative flex cursor-pointer items-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700">
+<input class="peer h-6 w-6 cursor-pointer appearance-none rounded-full border-2 border-slate-300 dark:border-slate-500 bg-transparent transition-all checked:border-primary checked:bg-primary hover:scale-105" type="checkbox"/>
+<span class="material-symbols-outlined absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 transition-opacity peer-checked:opacity-100 text-[18px]">check</span>
+</label>
+</div>
+</div>
+<div class="mt-8 border-t border-slate-200 dark:border-slate-700 pt-6">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white mb-4">ตัวอย่างขั้นตอน (Preview)</h3>
+<div class="relative flex gap-4 pb-4">
+<div class="flex flex-col items-center">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm z-10">1</div>
+<div class="w-0.5 h-full bg-slate-200 dark:bg-slate-700 -mt-1 -mb-1"></div>
+</div>
+<div class="pb-6">
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<h4 class="font-bold text-slate-900 dark:text-white mb-1">เตรียมข้าว</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">ล้างข้าวหอมมะลิให้สะอาด พักไว้ให้สะเด็ดน้ำ เตรียมกระเทียมและขิง</p>
+</div>
+</div>
+</div>
+<div class="relative flex gap-4">
+<div class="flex flex-col items-center">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 font-bold text-sm z-10">2</div>
+</div>
+<div>
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm opacity-60">
+<h4 class="font-bold text-slate-900 dark:text-white mb-1">ต้มไก่</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">ตั้งน้ำให้เดือด ใส่เกลือเล็กน้อย นำอกไก่ลงไปต้มจนสุก...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 w-full z-50 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light dark:via-background-dark to-transparent pt-10 pb-6 px-4 pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto">
+<button class="w-full flex items-center justify-center gap-2 h-14 bg-primary rounded-xl shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-[1.02] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-white font-bold">shopping_basket</span>
+<span class="text-white font-bold text-lg">เพิ่มลงตะกร้า (3 รายการ)</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>

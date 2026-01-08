@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="light" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopping List</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563eb","primary-dark": "#1e3a8a","background-light": "#f8fafc","background-dark": "#0f172a",},
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>.custom-checkbox:checked {
+        background-color: #2563eb;
+        border-color: #2563eb;
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB_idR1Uv1JbfL1-PHi1L_D6uRKhxWPStJOFfAjRq9sAlaLuEXfG5R2vvPbfC4bmxYtTFO9Yx6PqdgIjr3RqjTFAo4RChULx0RXLtD_tQBmFtpLeU9jeA3Nx9Ki9tzYVd6Y10JbW3_REL3PxbnNoyNC1bshwIsDtLmtELQn5wD_jEpj9WgHjO36YXHupxytXYtfh8Z2o_tWQwgJeaazJA8yE3kzymKYIwLdutOPKqQt3EZtlWA69Yqw_W6FiG0x7rjw9uPub0B-mPI5)
+    }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<header class="sticky top-0 z-20 flex items-center justify-between bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md px-4 py-3 border-b border-gray-200/50 dark:border-gray-800/50 transition-colors duration-200">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-white flex-1 text-center">
+                รายการช้อปปิ้ง
+            </h1>
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-2xl">more_horiz</span>
+</button>
+</header>
+<div class="px-4 py-6">
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-end">
+<p class="text-slate-900 dark:text-white text-base font-bold">ความคืบหน้า</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">ซื้อแล้ว 5/20 รายการ</p>
+</div>
+<div class="relative h-3 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
+<div class="absolute top-0 left-0 h-full rounded-full bg-primary transition-all duration-500 ease-out" style="width: 25%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="text-xs font-semibold text-primary-dark dark:text-primary bg-primary/10 dark:bg-primary/20 px-2 py-1 rounded">เหลืออีก 15 รายการ</span>
+<span class="text-primary-dark dark:text-primary text-sm font-bold">25%</span>
+</div>
+</div>
+</div>
+<div class="px-4 pb-2">
+<div class="flex p-1 rounded-xl bg-gray-200 dark:bg-gray-800">
+<label class="flex-1 cursor-pointer">
+<input checked="" class="peer sr-only" name="view_mode" type="radio" value="category"/>
+<div class="flex items-center justify-center py-2 px-3 rounded-lg text-sm font-bold transition-all text-gray-500 dark:text-gray-400 peer-checked:bg-white dark:peer-checked:bg-gray-700 peer-checked:text-slate-900 dark:peer-checked:text-white peer-checked:shadow-sm">
+                        ตามหมวดหมู่
+                    </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="peer sr-only" name="view_mode" type="radio" value="menu"/>
+<div class="flex items-center justify-center py-2 px-3 rounded-lg text-sm font-bold transition-all text-gray-500 dark:text-gray-400 peer-checked:bg-white dark:peer-checked:bg-gray-700 peer-checked:text-slate-900 dark:peer-checked:text-white peer-checked:shadow-sm">
+                        ตามเมนู
+                    </div>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<div class="mb-2">
+<div class="sticky top-[60px] z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur px-4 py-3 flex items-center gap-2">
+<div class="bg-green-100 dark:bg-green-900/30 p-1.5 rounded-lg text-green-700 dark:text-green-400">
+<span class="material-symbols-outlined text-xl">nutrition</span>
+</div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">ผักและผลไม้</h3>
+<span class="ml-auto text-xs font-medium text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-full">4</span>
+</div>
+<div class="px-4 flex flex-col gap-3">
+<label class="group flex items-start gap-4 p-3 rounded-xl bg-white dark:bg-gray-800/50 border border-transparent hover:border-primary/30 transition-all cursor-pointer shadow-sm">
+<div class="relative flex items-center pt-1">
+<input class="custom-checkbox h-6 w-6 rounded-md border-2 border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-0 focus:ring-offset-0 focus:border-primary cursor-pointer transition-colors" type="checkbox"/>
+</div>
+<div class="flex flex-col flex-1">
+<span class="text-slate-900 dark:text-white font-bold text-base group-has-[:checked]:line-through group-has-[:checked]:text-gray-400 transition-colors">มะนาว</span>
+<span class="text-gray-500 dark:text-gray-400 text-sm group-has-[:checked]:text-gray-300">4 ลูก • สำหรับ ต้มยำกุ้ง</span>
+</div>
+<button class="text-gray-400 hover:text-red-500 transition-colors p-1">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</label>
+<label class="group flex items-start gap-4 p-3 rounded-xl bg-white dark:bg-gray-800/50 border border-transparent hover:border-primary/30 transition-all cursor-pointer shadow-sm">
+<div class="relative flex items-center pt-1">
+<input class="custom-checkbox h-6 w-6 rounded-md border-2 border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-0 focus:ring-offset-0 focus:border-primary cursor-pointer transition-colors" type="checkbox"/>
+</div>
+<div class="flex flex-col flex-1">
+<span class="text-slate-900 dark:text-white font-bold text-base group-has-[:checked]:line-through group-has-[:checked]:text-gray-400 transition-colors">พริกขี้หนู</span>
+<span class="text-gray-500 dark:text-gray-400 text-sm group-has-[:checked]:text-gray-300">50 กรัม • เผ็ดมาก</span>
+</div>
+</label>
+<label class="group flex items-start gap-4 p-3 rounded-xl bg-white dark:bg-gray-800/50 border border-transparent hover:border-primary/30 transition-all cursor-pointer shadow-sm">
+<div class="relative flex items-center pt-1">
+<input class="custom-checkbox h-6 w-6 rounded-md border-2 border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-0 focus:ring-offset-0 focus:border-primary cursor-pointer transition-colors" type="checkbox"/>
+</div>
+<div class="flex flex-col flex-1">
+<span class="text-slate-900 dark:text-white font-bold text-base group-has-[:checked]:line-through group-has-[:checked]:text-gray-400 transition-colors">ผักชี</span>
+<span class="text-gray-500 dark:text-gray-400 text-sm group-has-[:checked]:text-gray-300">1 กำ</span>
+</div>
+</label>
+</div>
+</div>
+<div class="mb-2">
+<div class="sticky top-[60px] z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur px-4 py-3 flex items-center gap-2">
+<div class="bg-red-100 dark:bg-red-900/30 p-1.5 rounded-lg text-red-700 dark:text-red-400">
+<span class="material-symbols-outlined text-xl">set_meal</span>
+</div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">เนื้อสัตว์</h3>
+<span class="ml-auto text-xs font-medium text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-full">2</span>
+</div>
+<div class="px-4 flex flex-col gap-3">
+<label class="group flex items-start gap-4 p-3 rounded-xl bg-white dark:bg-gray-800/50 border border-transparent hover:border-primary/30 transition-all cursor-pointer shadow-sm">
+<div class="relative flex items-center pt-1">
+<input class="custom-checkbox h-6 w-6 rounded-md border-2 border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-0 focus:ring-offset-0 focus:border-primary cursor-pointer transition-colors" type="checkbox"/>
+</div>
+<div class="flex flex-col flex-1">
+<span class="text-slate-900 dark:text-white font-bold text-base group-has-[:checked]:line-through group-has-[:checked]:text-gray-400 transition-colors">อกไก่ลอกหนัง</span>
+<span class="text-gray-500 dark:text-gray-400 text-sm group-has-[:checked]:text-gray-300">1 กก. • สำหรับ แกงเขียวหวาน</span>
+</div>
+</label>
+<label class="group flex items-start gap-4 p-3 rounded-xl bg-white dark:bg-gray-800/50 border border-transparent hover:border-primary/30 transition-all cursor-pointer shadow-sm">
+<div class="relative flex items-center pt-1">
+<input class="custom-checkbox h-6 w-6 rounded-md border-2 border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-0 focus:ring-offset-0 focus:border-primary cursor-pointer transition-colors" type="checkbox"/>
+</div>
+<div class="flex flex-col flex-1">
+<span class="text-slate-900 dark:text-white font-bold text-base group-has-[:checked]:line-through group-has-[:checked]:text-gray-400 transition-colors">หมูสับ</span>
+<span class="text-gray-500 dark:text-gray-400 text-sm group-has-[:checked]:text-gray-300">500 กรัม</span>
+</div>
+</label>
+</div>
+</div>
+<div class="mb-2">
+<div class="sticky top-[60px] z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur px-4 py-3 flex items-center gap-2">
+<div class="bg-amber-100 dark:bg-amber-900/30 p-1.5 rounded-lg text-amber-700 dark:text-amber-400">
+<span class="material-symbols-outlined text-xl">kitchen</span>
+</div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">เครื่องปรุง</h3>
+<span class="ml-auto text-xs font-medium text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-full">1</span>
+</div>
+<div class="px-4 flex flex-col gap-3">
+<label class="group flex items-start gap-4 p-3 rounded-xl bg-white dark:bg-gray-800/50 border border-transparent hover:border-primary/30 transition-all cursor-pointer shadow-sm">
+<div class="relative flex items-center pt-1">
+<input class="custom-checkbox h-6 w-6 rounded-md border-2 border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-0 focus:ring-offset-0 focus:border-primary cursor-pointer transition-colors" type="checkbox"/>
+</div>
+<div class="flex flex-col flex-1">
+<span class="text-slate-900 dark:text-white font-bold text-base group-has-[:checked]:line-through group-has-[:checked]:text-gray-400 transition-colors">น้ำปลาแท้</span>
+<span class="text-gray-500 dark:text-gray-400 text-sm group-has-[:checked]:text-gray-300">1 ขวด (700 มล.)</span>
+</div>
+</label>
+</div>
+</div>
+<div class="mt-4 px-4 pb-8">
+<button class="flex w-full items-center justify-between py-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+<span class="text-sm font-semibold">รายการที่ซื้อแล้ว (5)</span>
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+<div class="mt-2 opacity-60">
+<label class="group flex items-start gap-4 p-3 rounded-xl bg-gray-50 dark:bg-gray-900/30 border border-transparent transition-all cursor-pointer">
+<div class="relative flex items-center pt-1">
+<input checked="" class="custom-checkbox h-6 w-6 rounded-md border-2 border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-0 focus:ring-offset-0 focus:border-primary cursor-pointer transition-colors" type="checkbox"/>
+</div>
+<div class="flex flex-col flex-1">
+<span class="text-slate-900 dark:text-white font-bold text-base line-through text-gray-400">ไข่ไก่ เบอร์ 0</span>
+<span class="text-gray-300 dark:text-gray-500 text-sm">1 แผง (30 ฟอง)</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark pb-8 pt-12 pointer-events-none flex justify-center z-30">
+<button class="pointer-events-auto flex items-center justify-center gap-3 bg-[#0f172a] dark:bg-white text-white dark:text-[#0f172a] h-14 px-8 rounded-full shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 w-full max-w-sm">
+<span class="material-symbols-outlined text-2xl text-primary dark:text-primary-dark">add_circle</span>
+<span class="text-lg font-bold">เพิ่มรายการ</span>
+</button>
+</div>
+</div>
+
+</body></html>
